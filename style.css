@@ -1,0 +1,56 @@
+body {
+    text-align: center;
+    background: linear-gradient(to right, #ff99cc, #ff66b2);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    color: #ff007f;
+    font-size: 36px;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px #ff66b2;
+}
+
+p {
+    font-size: 20px;
+    color: #fff;
+}
+
+.animation {
+    font-size: 50px;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/* Floating hearts animation */
+.heart {
+    position: fixed;
+    font-size: 24px;
+    color: red;
+    opacity: 0.7;
+    animation: float 4s linear infinite;
+}
+
+@keyframes float {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* Canvas for Live Heart Drawing */
+canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
